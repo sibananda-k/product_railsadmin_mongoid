@@ -12,12 +12,21 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :catagory_id %><br />
+    <%= f.collection_select :catagory_id,Catagory.all, :id, :name  %>
+  </div>
+
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :price %><br />
     <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :SKU %><br />
+    <%= f.text_field :SKU %>
   </div>
   <div class="actions">
     <%= f.submit %>

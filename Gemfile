@@ -38,3 +38,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem 'mongoid'
 gem 'bson_ext'
+gem 'rails_admin'
+
+gem "devise"
+gem 'bootstrap-sass'
