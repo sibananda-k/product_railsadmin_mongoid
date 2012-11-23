@@ -13,13 +13,17 @@
   <tr>
     <td><%= product.name %></td>
     <td><%= product.price %></td>
-    <td><%= link_to 'Show', product %></td>  
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Show', product,:class => "btn btn-inverse", :method => :get %></td>  
+    <td><%= button_to 'Edit', edit_product_path(product) ,:class => "btn btn-inverse", :method => :get%></td>
+    <td><%= button_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },:class => "btn btn-danger", :method => :get %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Product', new_product_path %>
+<%= button_to 'New Product', new_product_path,:class => "btn btn-mini btn-primary", :method => :get%>
+ 
+<%= button_to 'Add New Catagory', new_catagory_path ,:class => "btn btn-mini btn-primary", :method => :get%>
+
+
