@@ -1,5 +1,3 @@
-
-
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -18,8 +16,13 @@
 </p>
 
 <p>
-  <b>Catagory:</b>
-  <%= @product.catagory.name %>
+			<b>Catagory:</b>
+			<% if @product.catagory != nil %>
+			<b><%= link_to @product.catagory.name, catagory_path(@product.catagory.id) %></b>
+			<% else%>
+			<b>No Catagory,Click Edit to Update</b>
+			
+  <% end %>
 </p>
 
 

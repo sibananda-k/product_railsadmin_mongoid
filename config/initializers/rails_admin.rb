@@ -16,8 +16,11 @@ RailsAdmin.config do |config|
 
   # If you want to track changes on your models:
   # config.audit_with :history, 'User'
+
   #Authorization for CanCan
-  config.authorize_with :cancan
+  #config.authorize_with :cancan
+
+  
 
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, 'User'
@@ -52,7 +55,10 @@ RailsAdmin.config do |config|
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
 
+config.model Product do
+  parent Catagory
 
+end
 
   ###  Product  ###
 
@@ -96,8 +102,5 @@ RailsAdmin.config do |config|
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
   # end
 
-config.model Product do
-  parent Catagory
 
-end
 end
